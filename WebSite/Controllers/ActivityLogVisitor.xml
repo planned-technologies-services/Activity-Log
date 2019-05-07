@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="ActivityLogVisitor" conflictDetection="overwriteChanges" label="Activity Log Visitor" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"ActivityLogVisitor"."visitorID" "VisitorID"
+	,"ActivityLogVisitor"."FirstName" "FirstName"
+	,"ActivityLogVisitor"."LastName" "LastName"
+	,"ActivityLogVisitor"."Address1" "Address1"
+	,"ActivityLogVisitor"."City" "City"
+	,"ActivityLogVisitor"."State" "State"
+	,"ActivityLogVisitor"."Zipcode" "Zipcode"
+	,"ActivityLogVisitor"."birthdate" "Birthdate"
+	,"ActivityLogVisitor"."IDNumber" "Idnumber"
+	,"ActivityLogVisitor"."ExpieryDate" "ExpieryDate"
+	,"ActivityLogVisitor"."IssuedDate" "IssuedDate"
+	,"ActivityLogVisitor"."Sex" "Sex"
+	,"ActivityLogVisitor"."Hight" "Hight"
+	,"ActivityLogVisitor"."AutoString" "AutoString"
+from "dbo"."ActivityLogVisitor" "ActivityLogVisitor"
+]]></text>
+    </command>
+    <command id="visitorIDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="visitorID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="VisitorID" type="Int32" allowNulls="false" isPrimaryKey="true" label="visitor ID" readOnly="true" />
+    <field name="FirstName" type="String" label="First Name" length="50" showInSummary="true" causesCalculate="true" />
+    <field name="LastName" type="String" label="Last Name" length="50" showInSummary="true" />
+    <field name="Address1" type="String" label="Address" length="150" showInSummary="true" />
+    <field name="City" type="String" label="City" length="50" showInSummary="true" />
+    <field name="State" type="String" label="State" length="2" showInSummary="true" />
+    <field name="Zipcode" type="String" label="Zipcode" length="10" />
+    <field name="Birthdate" type="DateTime" label="Birthdate" />
+    <field name="Idnumber" type="String" label="ID Number" length="50" />
+    <field name="ExpieryDate" type="DateTime" label="Expiery Date" />
+    <field name="IssuedDate" type="DateTime" label="Issued Date" />
+    <field name="Sex" type="String" label="Sex" length="1" />
+    <field name="Hight" type="String" label="Hight" length="20" />
+    <field name="AutoString" type="String" allowQBE="false" allowSorting="false" label="Scan" causesCalculate="true" length="150" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Activity Log Visitor">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="FirstName" columns="50" />
+        <dataField fieldName="LastName" columns="50" />
+        <dataField fieldName="Address1" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="2" />
+        <dataField fieldName="Zipcode" columns="10" />
+        <dataField fieldName="Birthdate" columns="10" />
+        <dataField fieldName="Idnumber" columns="50" />
+        <dataField fieldName="ExpieryDate" columns="10" />
+        <dataField fieldName="IssuedDate" columns="10" />
+        <dataField fieldName="Sex" columns="1" />
+        <dataField fieldName="Hight" columns="20" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Activity Log Visitor">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Activity Log Visitor" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="FirstName" columns="50" />
+            <dataField fieldName="LastName" columns="50" />
+            <dataField fieldName="Address1" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Zipcode" columns="10" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Idnumber" columns="50" />
+            <dataField fieldName="ExpieryDate" columns="10" />
+            <dataField fieldName="IssuedDate" columns="10" />
+            <dataField fieldName="Sex" columns="1" />
+            <dataField fieldName="Hight" columns="20" />
+            <dataField fieldName="AutoString" rows="5" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Activity Log Visitor">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Activity Log Visitor" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="AutoString" rows="5" textMode="Text" />
+            <dataField fieldName="FirstName" columns="50" />
+            <dataField fieldName="LastName" columns="50" />
+            <dataField fieldName="Address1" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Zipcode" columns="10" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Idnumber" columns="50" />
+            <dataField fieldName="ExpieryDate" columns="10" />
+            <dataField fieldName="IssuedDate" columns="10" />
+            <dataField fieldName="Sex" columns="1" />
+            <dataField fieldName="Hight" columns="20" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+  <businessRules>
+    <rule id="r100" type="JavaScript" commandName="Calculate|Insert|Update" phase="Execute" name="AutoString_Converter"><![CDATA[var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null && tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	//$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+]]></rule>
+  </businessRules>
+</dataController>

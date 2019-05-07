@@ -1,0 +1,611 @@
+<log xmlns="urn:schemas-codeontime-com:xml-builder" xmlns:aquarium="urn:schemas-codeontime-com:data-aquarium" xmlns:a="urn:schemas-codeontime-com:data-aquarium">
+  <c y="NodeSet" t="2017-06-26T10:26:07">
+    <controller name="ActivityLogVisitor" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="FirstName" />
+    <before>
+      <controller name="ActivityLogVisitor" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="AutoString" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:27:41">
+    <controller name="ActivityLogVisitor" />
+    <field name="FirstName" />
+    <configure type="JavaScriptConverter" />
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:29:26">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:29:36">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <configure type="JavaScriptConverter" />
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:34:25">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split();
+  	[FirstName]=newFieldArr[0];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:46:00">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:48:58">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[idnumber]=newFieldArr[7];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:49:02">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[idnumber]=newFieldArr[7];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:50:21">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Idnumber]=newFieldArr[7];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:52:57">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=newFieldArr[6];
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=newFieldArr[8];
+  	[IssuedDate]=newFieldArr[9];
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:55:05">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:56:32">
+    <controller name="ActivityLogVisitor" />
+    <view id="grid1" />
+    <dataField fieldName="AutoString" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-26T10:57:58">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <update>
+      <Label>Scan</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T11:09:12">
+    <controller name="ActivityLogVisitor" />
+    <field name="Address1" />
+    <update>
+      <Label>Address</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:35:41">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	document.getElementById("FirstName").focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:38:12">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	 $(this).next().focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:40:38">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	// $(this).next().focus();
+  	$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:42:07">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	// $(this).next().focus();
+  	console.log($(this).parent('td'));
+  	$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:43:25">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	//$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:45:13">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <update>
+      <OnDemand>true</OnDemand>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:45:42">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <update>
+      <OnDemand>false</OnDemand>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:46:49">
+    <controller name="ActivityLogVisitor" />
+    <view id="createForm1" />
+    <dataField fieldName="AutoString" />
+    <update>
+      <TextMode>RichText</TextMode>
+      <Hidden>false</Hidden>
+      <DataViewShowInSummary>false</DataViewShowInSummary>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-26T12:49:14">
+    <controller name="ActivityLogVisitor" />
+    <view id="createForm1" />
+    <dataField fieldName="AutoString" />
+    <update>
+      <TextMode>Text</TextMode>
+      <Hidden>false</Hidden>
+      <DataViewShowInSummary>false</DataViewShowInSummary>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T11:38:06">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <update>
+      <Length>100</Length>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T11:39:25">
+    <controller name="ActivityLogVisitor" />
+    <field name="AutoString" />
+    <update>
+      <Length>150</Length>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T11:53:26">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	//$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T12:09:06">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	//$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+      <Phase>After</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T12:09:43">
+    <controller name="ActivityLogVisitor" />
+    <rule id="r100" />
+    <update>
+      <Script>var fieldValue = [AutoString];
+var commandName = this.arguments().CommandName
+var triggerFieldName = this.arguments().Trigger;
+var tryConversion = commandName != 'Calculate' || triggerFieldName == 'AutoString';
+if (fieldValue != null &amp;&amp; tryConversion) {
+    // make sure that the value is a string
+    fieldValue = fieldValue.toString();
+    // convert the value to an upper-case string
+    var newFieldValue = fieldValue.toUpperCase();
+    // assign a new value to the field
+    [AutoString] = newFieldValue;
+   	var newFieldArr = fieldValue.split("|");
+  	[FirstName]=newFieldArr[0];
+  	[LastName]=newFieldArr[1];
+  	[Address1]=newFieldArr[2];
+  	[City]=newFieldArr[3];
+  	[State]=newFieldArr[4];
+  	[Zipcode]=newFieldArr[5];
+  	[Birthdate]=new Date(newFieldArr[6]);
+  	[Idnumber]=newFieldArr[7];
+  	[ExpieryDate]=new Date(newFieldArr[8]);
+  	[IssuedDate]=new Date(newFieldArr[9]);
+  	[Sex]=newFieldArr[10];
+  	[Hight]=newFieldArr[11];
+  	//$(this).parent('td').next('td').find('input').focus();
+    // prevent the server-side processing of the event
+    if (commandName == 'Calculate')
+        this.preventDefault();
+}
+</Script>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T12:14:04">
+    <controller name="ActivityLogVisitor" />
+    <insert type="actionGroup">
+      <Scope>Custom</Scope>
+      <Flat>false</Flat>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T12:14:17">
+    <controller name="ActivityLogVisitor" />
+    <actionGroup id="ag100" />
+    <delete />
+  </c>
+</log>

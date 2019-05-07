@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="ActivityLogVisitor" alias="ActivityLogVisitor" created="2017-06-26T10:23:42" modified="2017-06-26T10:24:48" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="visitorID" fieldName="VisitorID" label="visitor ID" />
+    <column name="FirstName" fieldName="FirstName" label="First Name" />
+    <column name="LastName" fieldName="LastName" label="Last Name" />
+    <column name="Address1" fieldName="Address1" label="Address1" />
+    <column name="City" fieldName="City" label="City" />
+    <column name="State" fieldName="State" label="State" />
+    <column name="Zipcode" fieldName="Zipcode" label="Zipcode" />
+    <column name="birthdate" fieldName="Birthdate" label="Birthdate" />
+    <column name="IDNumber" fieldName="Idnumber" label="ID Number" />
+    <column name="ExpieryDate" fieldName="ExpieryDate" label="Expiery Date" />
+    <column name="IssuedDate" fieldName="IssuedDate" label="Issued Date" />
+    <column name="Sex" fieldName="Sex" label="Sex" />
+    <column name="Hight" fieldName="Hight" label="Hight" />
+    <column name="AutoString" fieldName="AutoString" label="Auto String" />
+  </columns>
+</dataModel>
